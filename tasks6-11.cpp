@@ -17,7 +17,7 @@ string itc_even_place(string str)
             result += str[i];
     }
 
-    return result + '\0';
+    return result;
 }
 
 double itc_percent_lower_uppercase(string str)
@@ -40,7 +40,7 @@ double itc_percent_lower_uppercase(string str)
         }
     }
 
-    return upper / lower;
+    return (upper / lower) * 100;
 }
 
 string itc_reverse_str(string str)
@@ -53,7 +53,7 @@ string itc_reverse_str(string str)
         answer += str[i];
     }
 
-    return answer + '\0';
+    return answer;
 }
 
 string itc_slice_str(string str, int start, int end)
@@ -76,10 +76,10 @@ string itc_slice_str(string str, int start, int end)
         answer += str[i];
     }
 
-    return answer + '\0';
+    return answer;
 }
 
 bool itc_equal_reverse(string str)
 {
-    return (str + '\0' == itc_reverse_str(str));
+    return (str == itc_reverse_str(str));
 }
