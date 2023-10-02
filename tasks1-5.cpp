@@ -61,8 +61,6 @@ int itc_count_char_in_str(char ch, string str)
         if (str[i] == ch)
         {
             answer++;
-        } else {
-            break;
         }
     }
 
