@@ -5,17 +5,25 @@
 
 string itc_cmp_str(string str1, string str2, int num)
 {
+    string result;
 
-    for (int i = num; i < itc_len(str1) - num; i++)
-    {
-        swap(str1[i], str1[i + num]);
-
-        if (i - num <= itc_len(str2) - 1)
-            str1[i] = str2[i - num];
-    }
-
-
-    return str1;
+    int s2_index = 0;
+    int s1_index = 0;
+    
+    while (itc_len(result) <= itc_len(str1) - 1)
+      {
+        if (s1_index == num)
+        {
+          while (s2_index < itc_len(str2) && itc_len(result) <= itc_len(str1))
+            {
+              result += str2[s2_index];
+              s2_index++;
+            }
+        }
+        result += str1[s1_index];
+        s1_index++;
+      }
+    return result;
 }
 
 int itc_find_str(string str1, string str2)
