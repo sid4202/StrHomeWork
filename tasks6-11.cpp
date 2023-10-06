@@ -29,18 +29,18 @@ double itc_percent_lower_uppercase(string str)
 
     for (int i = 0; i < len; i++)
     {
-        if ((int(str[i]) >= 65) && (int(str[i]) <= 90))
+        if ((str[i] >= 'A') && (str[i] <= 'Z'))
         {
             upper++;
         }
 
-        if ((int(str[i]) >= 97) && (int(str[i]) <= 122))
+        if ((str[i] >= 'a') && (str[i] <= 'z'))
         {
             lower++;
         }
     }
 
-    return (upper / lower) * 100;
+    return (lower / upper) * 100.0;
 }
 
 string itc_reverse_str(string str)
