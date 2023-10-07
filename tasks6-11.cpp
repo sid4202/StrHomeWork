@@ -8,7 +8,7 @@ string itc_even_place(string str)
 
     long long len = itc_len(str);
 
-    if (len == 1)
+    if (len == 1 or len == 0)
         return "-1";
 
     for (int i = 0; i < len; i++)
@@ -40,7 +40,7 @@ double itc_percent_lower_uppercase(string str)
         }
     }
 
-    return (lower / upper) * 100.0;
+    return lower / upper;
 }
 
 string itc_reverse_str(string str)
