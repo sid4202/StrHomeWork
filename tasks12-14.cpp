@@ -6,24 +6,20 @@
 string itc_cmp_str(string str1, string str2, int num)
 {
     string result;
+    int first_len = itc_len(str1);
 
-    int s2_index = 0;
-    int s1_index = 0;
-    
-    while (itc_len(result) <= itc_len(str1) - 1)
+    for (int i = 0; i < itc_len(str1); i++)
       {
-        if (s1_index == num)
+        if (i == num)
         {
-          while (s2_index < itc_len(str2) && itc_len(result) <= itc_len(str1))
+          for (int j = 0; j < itc_len(str2); j++)
             {
-              result += str2[s2_index];
-              s2_index++;
+              result += str2[j];
             }
         }
-        result += str1[s1_index];
-        s1_index++;
+        result += str1[i];
       }
-    return result;
+  return itc_slice_str(result, 0, first_len - 1);
 }
 
 int itc_find_str(string str1, string str2)
