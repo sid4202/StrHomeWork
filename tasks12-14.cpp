@@ -68,3 +68,25 @@ string itc_three_str(string str1, string str2, string str3)
 
     return answer;
 }
+
+int itc_max_char_on_end(string str)
+{
+  int max_char_on_end = 0;
+  int n = itc_len(str);
+
+  int current_digits_in_row = 0;
+
+  for(int i = 1; i < n; i++)
+    {
+      if (str[i] >= '0' and str[i] <= '9')
+        {
+          current_digits_in_row++;
+          if (current_digits_in_row > max_char_on_end)
+            max_char_on_end = current_digits_in_row;
+        }
+      else
+        current_digits_in_row = 0;
+    }
+
+  return max_char_on_end;
+}
