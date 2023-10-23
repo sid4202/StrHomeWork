@@ -56,7 +56,6 @@ string itc_three_str(string str1, string str2, string str3)
             break;
 
         str1 = itc_slice_str(str1, substr_pos + itc_len(str2), itc_len(str1) - 1);
-        cout << answer << " " << str1 << endl;
     }
 
     if (itc_find_str(str1, str2) == - 1)
